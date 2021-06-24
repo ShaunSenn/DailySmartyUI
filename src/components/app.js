@@ -1,26 +1,16 @@
 import React, { Component } from 'react';
 import Logo from "./logo"
+import Search from "./search";
+import RecentPosts from './recent-posts';
 
 export default class App extends Component {
   render() {
     return (
-      <div className='app'>
-        <div className="container">
-        <div class="logo">
+      <div>
+        <div>
           <Logo/>
-        </div>
-
-        <div class="search">
-          <input placeholder="daily smarty"/>
-        </div>
-
-        <div class="recent">
-          <ul>
-            <li>post</li>
-            <li>post</li>
-            <li>post</li>
-          </ul>
-        </div>
+          <Search/>
+          <RecentPosts />
         </div>
       </div>
     );
