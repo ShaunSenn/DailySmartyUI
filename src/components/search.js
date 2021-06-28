@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 
+import { withRouter } from 'react-router-dom';
+
 
 class Search extends Component {
 
     handleFormSubmit = function({query}) {
         console.log("trying to handle submit for query", query);
         //navigate to a new route.
+        this.props.history.push('/results');
     }
 
     
@@ -28,5 +31,7 @@ class Search extends Component {
 Search = reduxForm({
     form: 'search'
 })(Search);
+
+Search = withRouter(Search); //withRouter is a high order component 
 
 export default Search;

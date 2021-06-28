@@ -3,7 +3,7 @@ import Logo from "./logo"
 import Search from "./search";
 import RecentPosts from './recent-posts';
 
-export default class App extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div>
