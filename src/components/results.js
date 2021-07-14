@@ -5,10 +5,9 @@ class Results extends Component {
     render() {
         return(
             <div className="results">
-                <Logo/>
-                <p>Results if I type more here it still doesn't show up :(</p>
+                <Logo size={55}/>
             </div>
         )
     }
 }
-export default Logo;
+export default Results;
