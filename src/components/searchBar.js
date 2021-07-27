@@ -4,12 +4,13 @@ import { Field, reduxForm } from "redux-form";
 import { withRouter } from 'react-router-dom';
 
 
-class Search extends Component {
+class SearchBar extends Component {
 
-    
     handleFormSubmit = function({query}) {
-     this.props.onSubmit(query);
-    }
+        this.props.onSubmit(query);
+       }
+    //handleFormSubmit's functionality gets passed to home.js when I import Search from "./search" 
+    //and connect props to the two.
 
     
     renderInput(field) {
@@ -27,10 +28,10 @@ class Search extends Component {
     }
 }
 
-Search = reduxForm({
+SearchBar = reduxForm({
     form: 'search'
-})(Search);
+})(SearchBar);
 
-Search = withRouter(Search); //withRouter is a high order component 
+SearchBar = withRouter(SearchBar); //withRouter is a high order component 
 
-export default Search;
+export default SearchBar;

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 import Logo from './logo';
-import Search from './search';
+import SearchBar from './searchBar';
+import ResultsPost from "./results-post";
 
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -10,14 +11,16 @@ import * as actions from '../actions';
 class Results extends Component {
 
 handleSearchBarSubmit(query) {
-    this.props.fetchPostsWithQuery(query);
+    console.log("search stuff");
+    // this.props.fetchPostsWithQuery(query);
 } 
 
     render() {
         return(
             <div className="results">
                 <Logo size={55}/>
-                <Search onSubmit={(query) => this.handleSearchBarSubmit(query)}/>
+                <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)}/>
+                <ResultsPost />
             </div>
         )
     }
