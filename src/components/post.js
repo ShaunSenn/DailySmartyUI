@@ -41,7 +41,7 @@ class Post extends Component {
                         </div>
                         <div className="recent-post-topics">
                             {this.renderTopics()}
-                        </div>            
+                        </div>
                     </li>
             )
         } else if(this.props.type == 'result') {
@@ -55,8 +55,9 @@ class Post extends Component {
                     </div>
                     
                     <div className='result-post__title'>
-                       <a href={this.props.url_for_post}>
-                           {this.props.title}</a>
+                        <a href={this.props.url_for_post}>
+                           {this.props.title}
+                        </a>
                     </div>
 
                     <AnimateHeight
